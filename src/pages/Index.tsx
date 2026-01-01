@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
@@ -79,12 +80,22 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-br from-background via-muted/30 to-background">
       <div className="container mx-auto px-4 py-8 max-w-7xl">
         <div className="mb-12 animate-fade-in">
-          <h1 className="font-heading text-5xl font-bold mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-            Социальный статус человека в обществе
-          </h1>
-          <p className="text-lg text-muted-foreground max-w-3xl">
-            Углубленный курс по изучению социального статуса, его формированию и роли в современном обществе
-          </p>
+          <div className="flex items-start justify-between gap-4 flex-wrap">
+            <div>
+              <h1 className="font-heading text-5xl font-bold mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+                Социальный статус человека в обществе
+              </h1>
+              <p className="text-lg text-muted-foreground max-w-3xl">
+                Углубленный курс по изучению социального статуса, его формированию и роли в современном обществе
+              </p>
+            </div>
+            <Link to="/presentation">
+              <Button size="lg" className="gap-2">
+                <Icon name="Presentation" size={20} />
+                Открыть презентацию
+              </Button>
+            </Link>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8 animate-scale-in">
